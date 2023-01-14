@@ -71,6 +71,11 @@ public class BlogService {
         for(Image image:res){
             imageService1.deleteImage(image);
         }
+        User user=blogRepository1.findById(blogId).get().getUser();
+        List<Blog> blogList=user.getBlogList();
+        blogList.remove(blogRepository1.findById(blogId).get());
+        user.setBlogList(blogList);
         blogRepository1.deleteById(blogId);
+
     }
 }
