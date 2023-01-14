@@ -26,8 +26,7 @@ public class BlogService {
 
     public List<Blog> showBlogs(){
         //find all blogs
-        List<Blog> blogList=null;
-        return blogList;
+        return  blogRepository1.findAll();
 
     }
 
