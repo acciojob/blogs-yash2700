@@ -45,6 +45,7 @@ public class ImageService {
         //In case the image is null, return 0
         if(image!=null &&screenDimensions.split("X").length == 2){
             int screenArea= Integer.parseInt(""+screenDimensions.charAt(0))*Integer.parseInt(""+screenDimensions.charAt(2));
+            if(image.getDimensions().charAt(0)=='0' || image.getDimensions().charAt(2)=='0') return 0;
             int imageArea= Integer.parseInt(""+image.getDimensions().charAt(0))*Integer.parseInt(""+image.getDimensions().charAt(2));
             return screenArea/imageArea;
         }
