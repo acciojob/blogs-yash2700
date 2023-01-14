@@ -26,10 +26,7 @@ public class UserService {
 
 
     public void updateUser(User user){
-        User user1=userRepository3.findByUsername(user.getUsername());
-        user1.setFirstname(user.getFirstname());
-        user1.setLastname(user.getLastname());
-        userRepository3.save(user1);
+        userRepository3.save(user);
     }
 
     public User findUserByUsername(String username){
