@@ -40,7 +40,7 @@ public class Blog {
         this.content = content;
     }
 
-    public Date getPubdate() {
+    public Date getPubDate() {
         return pubdate;
     }
 
@@ -52,7 +52,7 @@ public class Blog {
         this.imageList = imageList;
     }
 
-    public void setPubdate(Date pubdate
+    public void setPubDate(Date pubdate
     ) {
         this.pubdate = pubdate;
     }
